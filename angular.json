@@ -2,5 +2,123 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1, 
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "TestApp": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/TestApp",
+      "sourceRoot": "projects/TestApp/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/TestApp",
+            "index": "projects/TestApp/src/index.html",
+            "main": "projects/TestApp/src/main.ts",
+            "polyfills": "projects/TestApp/src/polyfills.ts",
+            "tsConfig": "projects/TestApp/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/TestApp/src/favicon.ico",
+              "projects/TestApp/src/assets"
+            ],
+            "styles": [
+              "projects/TestApp/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/TestApp/src/environments/environment.ts",
+                  "with": "projects/TestApp/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "TestApp:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "TestApp:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "TestApp:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/TestApp/src/test.ts",
+            "polyfills": "projects/TestApp/src/polyfills.ts",
+            "tsConfig": "projects/TestApp/tsconfig.spec.json",
+            "karmaConfig": "projects/TestApp/karma.conf.js",
+            "assets": [
+              "projects/TestApp/src/favicon.ico",
+              "projects/TestApp/src/assets"
+            ],
+            "styles": [
+              "projects/TestApp/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/TestApp/tsconfig.app.json",
+              "projects/TestApp/tsconfig.spec.json",
+              "projects/TestApp/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/TestApp/e2e/protractor.conf.js",
+            "devServerTarget": "TestApp:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "TestApp:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "defaultProject": "TestApp"
 }
