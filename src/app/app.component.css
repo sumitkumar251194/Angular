@@ -1,0 +1,69 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 750px;
+    width: 100%;
+    background-image: url(C:\Users\s.by.kumar\Desktop\Project\form-demo\src\assets\backimg.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.login-box{
+    color: rgb(1, 1, 12); 
+}
+
+.login-box h2 {
+    padding: 10px;
+    border-bottom: 4px solid green;
+    font-size: 40px;
+      
+}
+.text-box{
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 30px;
+    width: 100%;
+}
+.text-box i{
+    float: left;
+    margin: 2px;
+}
+.text-box small{
+    float: left;
+    margin: 2px;
+}
+
+.text-box input{
+    padding: 2px;
+    margin: 2px;
+}
+.button-box{
+    display :flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    margin: 2px; 
+}
+.btn{
+    padding: 2px;
+    margin: 2px;
+    width: 50%;
+}
+.danger{
+    color:black;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
