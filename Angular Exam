@@ -1,0 +1,34 @@
+1. command to create angular app with routing module --.
+ng new my-app --routing
+
+2, what is the purose of reactive extensive rxjs --
+ ans -  create and manipulate streams of events and data that uses observable sequence.
+ 
+3. which of the following command to find module.
+
+Ans - npm search -- > for Package .
+      npm find --> find all files in current directory.
+	  npm track -- > tracking objects and color
+	  npm inquiry ==> advance quiry string
+	  
+	  
+4. Angular 4+ feature
+Ans - 
+Router ParamMap. ...
+Animations. ...
+ngIf: Can also be used with “else” ...
+Dynamic Components with NgComponentOutlet. ...
+TypeScript 2.1/2.2. ...
+StrictNullChecks. ...
+Angular Universal. ...
+Dependencies update.
+
+5.  Resolve Objects are Data Provider class used in Routing...
+
+6. How angular Rebuild list 
+ Ans : through object identity
+ 
+ 7. For validating string length minlength="5" that way can be use.
+ 
+ 
+
