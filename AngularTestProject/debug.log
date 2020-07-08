@@ -1,0 +1,5 @@
+[0630/172924.550:ERROR:crash_report_database_win.cc(558)] GetFileAttributes C:\Users\SBY~1.KUM\AppData\Local\Temp\karma-65074345\Crashpad: The system cannot find the file specified. (0x2)
+[0630/173900.939:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0701/175357.343:ERROR:crash_report_database_win.cc(558)] GetFileAttributes C:\Users\SBY~1.KUM\AppData\Local\Temp\karma-55211119\Crashpad: The system cannot find the file specified. (0x2)
+[0701/175950.337:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0701/180341.325:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
